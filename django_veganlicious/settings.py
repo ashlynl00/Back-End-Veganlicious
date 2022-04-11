@@ -91,8 +91,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'veganlicious_api',
-        'USER': 'postgres',
-        'PASSWORD': 'congrats',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost'
     }
     # 'default': {
