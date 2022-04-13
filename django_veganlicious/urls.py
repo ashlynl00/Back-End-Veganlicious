@@ -21,4 +21,4 @@ from django.conf.urls import include # add this
 urlpatterns = [
     path('', include('recipes_api.urls')), # add this
     path('admin/', admin.site.urls),
-]
+] 
