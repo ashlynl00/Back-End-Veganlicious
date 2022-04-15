@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-(tey-l5@y0innb@hy$%y$#y$e&=z#$2j1!1lnxaut*ntkyqc2p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'veganlicious.herokuapp.com', '*']
 
@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['localhost', 'veganlicious.herokuapp.com', '*']
 INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
+    'cloudinary',
     'recipes_api',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -58,6 +59,13 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CLOUDINARY_STORAGE = {
+'CLOUD_NAME': 'dcbh0v5ds',
+'API_KEY': '815567418342927',
+'API_SECRET': 'Is3WD5_mD2iB6agzwq8HunRJ_I0',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 ROOT_URLCONF = 'django_veganlicious.urls'
 
